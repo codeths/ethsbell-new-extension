@@ -1,0 +1,34 @@
+body {
+	background-color: #eeeeee;
+	padding: 5px;
+	font-family: sans-serif;
+}
+
+.option {
+	padding: 5px 0px;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.option label,
+.option input {
+	vertical-align: middle;
+}
+
+#notifs-offset {
+	width: 40px;
+}
+
+#save {
+	margin-top: 10px;
+}
+
+#banner {
+	padding: 10px;
+	margin: 10px 0px;
+	border-radius: 5px;
+	display: none;
+	font-size: 14px;
+}

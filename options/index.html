@@ -1,0 +1,47 @@
+<!--
+// Copyright (c) 2011 Frank Kohlhepp
+// https://github.com/frankkohlhepp/fancy-settings
+// License: LGPL v2.1
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title id="title">ETHSBell Options</title>
+
+		<!-- Stylesheets -->
+		<link id="favicon" rel="icon" href="/icons/favicon.ico" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="banner"></div>
+			<form id="option-form">
+				<div class="option">
+					<span>
+						<input type="checkbox" id="notifs-enabled" />
+						<label for="notifs-enabled">Enable Notifications</label>
+					</span>
+				</div>
+				<div class="option">
+					<span>
+						<label for="notifs-offset">Send notifications</label>
+						<input type="number" id="notifs-offset" min="0" />
+						<label for="notifs-offset">minute(s) before period end</label>
+					</span>
+				</div>
+				<div class="option">
+					<fieldset>
+						<legend>Schedule</legend>
+						<input type="radio" name="instance" id="instance:main" value="main" required>
+						<label for="instance:main">Main Campus</label>
+						<input type="radio" name="instance" id="instance:dayschool" value="dayschool">
+						<label for="instance:dayschool">Day School</label>
+					</fieldset>
+				</div>
+				<input id="save" type="submit" value="Save" />
+			</form>
+		</div>
+		<script src="settings.js"></script>
+	</body>
+</html>
