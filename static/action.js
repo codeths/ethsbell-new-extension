@@ -42,7 +42,10 @@ async function updateFrame(draw){
     }
     else{
         data = await fetchData();
-        const updateTime = Math.min(Date.now()+120000, data.now[1][0].end_timestamp*1000)
+        let updateTime = Date.now()+120000
+        if(data.now[1][0]){
+            updateTime = Math.min(Date.now()+120000, data.now[1][0].end_timestamp*1000)
+        }
         chrome.storage.local.set({schedule: {data: data, updated: updateTime}})
     }
     if(draw){
@@ -57,7 +60,6 @@ async function updateFrame(draw){
         height += 75
     }
     height += data.locations.closed.length === 0 ? 0 : 75
-    console.log(height)
     document.body.style.height = `${height}px`
     document.body.style.height = `${height}px`
     document.body.style.color = textColor
